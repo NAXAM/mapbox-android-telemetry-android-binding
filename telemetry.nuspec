@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.Mapbox.Services.Android.Telemetry</id>
+        <version>2.0.0</version>
+        <description>Xamarin Binding Library - Mapbox Android Telemetry</description>
+        <authors>Vu Duc Tuyen</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>Naxam - Mapbox Android Telemetry</title>
+        <releaseNotes>Mapbox Android Telemetry v2.0.0</releaseNotes>
+        <summary>Xamarin Binding Library - Mapbox Android Telemetry</summary>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/xam-mapbox-android-telemetry</projectUrl>
+        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <tags>Xamarin.Android, mapbox, telemetry</tags>
+        <dependencies>
+            <dependency id="Xamarin.Android.Support.v7.AppCompat" version="25.1.0" />
+            <dependency id="Naxam.SquareUp.OkHttp3" version="3.6.0" />
+        </dependencies>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="Naxam.Mapbox.Services.Android.Telemetry/bin/Release/Naxam.Mapbox.Services.Android.Telemetry.dll" target="lib/MonoAndroid10/Naxam.Mapbox.Services.Android.Telemetry.dll" />
+    </files>
+</package>

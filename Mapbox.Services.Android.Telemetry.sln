@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Mapbox.Services.Android.Telemetry", "Naxam.Mapbox.Services.Android.Telemetry\Naxam.Mapbox.Services.Android.Telemetry.csproj", "{A3DDCB88-547A-4E4B-885D-206DA61C0127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3DDCB88-547A-4E4B-885D-206DA61C0127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DDCB88-547A-4E4B-885D-206DA61C0127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DDCB88-547A-4E4B-885D-206DA61C0127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DDCB88-547A-4E4B-885D-206DA61C0127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
