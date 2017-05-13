@@ -7,14 +7,4 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry']" name="managedName">Mapbox.Services.Android.Telemetry</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.backoff']" name="managedName">Mapbox.Services.Android.Telemetry.Backoff</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.connectivity']" name="managedName">Mapbox.Services.Android.Telemetry.Connectivity</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.connectivity']" name="managedName">Mapbox.Services.Android.Telemetry.Connectivity</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.constants']" name="managedName">Mapbox.Services.Android.Telemetry.Constants</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.http']" name="managedName">Mapbox.Services.Android.Telemetry.Http</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.location']" name="managedName">Mapbox.Services.Android.Telemetry.Location</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.permissions']" name="managedName">Mapbox.Services.Android.Telemetry.Permissions</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.service']" name="managedName">Mapbox.Services.Android.Telemetry.Service</attr>
-	<attr path="/api/package[@name='com.mapbox.services.android.telemetry.utils']" name="managedName">Mapbox.Services.Android.Telemetry.Utils</attr>
 </metadata>
