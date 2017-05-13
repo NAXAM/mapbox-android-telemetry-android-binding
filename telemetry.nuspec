@@ -3,13 +3,13 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.Mapbox.Services.Android.Telemetry</id>
-        <version>2.0.0.2</version>
+        <version>2.1.0</version>
         <description>Xamarin Binding Library - Mapbox Android Telemetry</description>
         <authors>Vu Duc Tuyen</authors>
         <owners>NAXAM CO.,LTD</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox Android Telemetry</title>
-        <releaseNotes>Mapbox Android Telemetry v2.0.0</releaseNotes>
+        <releaseNotes>Mapbox Android Telemetry v2.1.0</releaseNotes>
         <summary>Xamarin Binding Library - Mapbox Android Telemetry</summary>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/NAXAM/xam-mapbox-android-telemetry</projectUrl>
