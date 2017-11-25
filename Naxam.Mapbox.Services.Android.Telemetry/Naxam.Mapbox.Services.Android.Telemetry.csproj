@@ -73,6 +73,9 @@
     <Reference Include="Square.OkHttp3">
       <HintPath>..\packages\Square.OkHttp3.3.6.0\lib\MonoAndroid\Square.OkHttp3.dll</HintPath>
     </Reference>
+    <Reference Include="Naxam.Mapzen.Lost.Droid">
+      <HintPath>..\packages\Naxam.Mapzen.Lost.Droid.3.0.4\lib\MonoAndroid10\Naxam.Mapzen.Lost.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
