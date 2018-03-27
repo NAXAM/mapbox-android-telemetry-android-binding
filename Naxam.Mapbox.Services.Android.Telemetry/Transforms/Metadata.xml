@@ -12,4 +12,7 @@
 	<attr
 		path="/api/package[@name='com.mapbox.services.android.telemetry.location']/class[@name='LocationEngine']/field[@name='smallestDisplacement']"
 		name="managedName">_smallestDisplacement</attr>
+		<attr
+		path="/api/package[@name='com.mapbox.services.android.telemetry.location']/class[@name='LocationEngine']/field[@name='priority']"
+		name="managedName">_priority</attr>
 </metadata>
