@@ -11,7 +11,7 @@ var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
 var VERSION = "3.1.5";
-var NUGET_SUFIX = "";
+var NUGET_SUFIX = ".1";
 
 //////////////////////////////////////////////////////////////////////
 // PREPARATION
@@ -89,23 +89,23 @@ Task("Pack")
             Dependencies = new []{
                 new NuSpecDependency {
                     Id = "Xamarin.Android.Support.v7.AppCompat",
-                    Version = "27.1.1"
+                    Version = "27.0.2.1"
                 },
                 new NuSpecDependency {
-                    Id = "Square.OkHttp3",
-                    Version = "3.11.0"
+                    Id = "Kwon.Squareup.OkHttp3.OkHttp",
+                    Version = "3.10.0.1"
                 },
                 new NuSpecDependency {
-                    Id = "Naxam.Mapbox.MapboxAndroidCore",
-                    Version = "0.2.1"
+                    Id = "Kwon.Mapbox.Android.Core",
+                    Version = "0.2.0.1"
                 },
                 new NuSpecDependency {
-                    Id = "Naxam.Google.Gson",
-                    Version = "2.8.5"
+                    Id = "GoogleGson",
+                    Version = "2.8.1"
                 },
                 new NuSpecDependency {
-                    Id = "Naxam.Arch.AndroidLifecycleExtensions",
-                    Version = "1.1.1"
+                    Id = "Xamarin.Android.Arch.Lifecycle.Extensions",
+                    Version = "1.0.0.1"
                 }
             },
             ReleaseNotes = new [] {
