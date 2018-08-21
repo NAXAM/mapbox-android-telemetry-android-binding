@@ -89,11 +89,11 @@ Task("Pack")
             Dependencies = new []{
                 new NuSpecDependency {
                     Id = "Xamarin.Android.Support.v7.AppCompat",
-                    Version = "26.1.0"
+                    Version = "27.1.1"
                 },
                 new NuSpecDependency {
                     Id = "Square.OkHttp3",
-                    Version = "3.10.0"
+                    Version = "3.11.0"
                 },
                 new NuSpecDependency {
                     Id = "Naxam.Mapbox.MapboxAndroidCore",
@@ -101,7 +101,7 @@ Task("Pack")
                 },
                 new NuSpecDependency {
                     Id = "Naxam.Google.Gson",
-                    Version = "2.8.2"
+                    Version = "2.8.5"
                 },
                 new NuSpecDependency {
                     Id = "Naxam.Arch.AndroidLifecycleExtensions",
