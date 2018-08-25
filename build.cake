@@ -11,7 +11,7 @@ var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
 var VERSION= "3.1.5";
-var NUGET_SUFIX = ".2";
+var NUGET_SUFIX = ".3";
 var ANDROID_CORE_VERSION = "0.2.1";
 
 //////////////////////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ var ANDROID_CORE_VERSION = "0.2.1";
 var artifacts = new [] {
     
      new Artifact {
-        Version =ANDROID_CORE_VERSION,
+        Version =ANDROID_CORE_VERSION + NUGET_SUFIX,
         NativeVersion = ANDROID_CORE_VERSION,
         ReleaseNotes = new string [] {
             "Mapbox for Android Core - v{0}"
@@ -35,6 +35,10 @@ var artifacts = new [] {
                  new NuSpecDependency {
                     Id = "Xamarin.Android.Support.v7.AppCompat",
                     Version = "27.0.2.1"
+                },
+                new NuSpecDependency {
+                    Id = "Xamarin.GooglePlayServices.Location",
+                    Version = "60.1142.1"
                 }
         }
     },
@@ -60,7 +64,7 @@ var artifacts = new [] {
                 },
                 new NuSpecDependency {
                     Id = "Naxam.Mapbox.MapboxAndroidCore",
-                    Version = "0.2.1"
+                    Version = ANDROID_CORE_VERSION + NUGET_SUFIX
                 },
                 new NuSpecDependency {
                     Id = "GoogleGson",
@@ -92,9 +96,9 @@ Task("Downloads")
 Task("Clean")
     .Does(() =>
 {
-    CleanDirectory("**/*/packages");
+    CleanDirectory("packages");
 
-    CleanDirectory("./nugets/*");
+    CleanDirectory("./nugets");
 
     var nugetPackages = GetFiles("./nugets/*.nupkg");
 
@@ -113,8 +117,6 @@ Task("UpdateVersion")
 });
 
 Task("Pack")
-    .IsDependentOn("Downloads")
-    .IsDependentOn("UpdateVersion")
     .Does(() =>
 {
     foreach(var artifact in artifacts) {
@@ -134,6 +136,9 @@ Task("Pack")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
+    .IsDependentOn("Downloads")
+    .IsDependentOn("UpdateVersion")
+    .IsDependentOn("Clean")
     .IsDependentOn("Pack");
 
 //////////////////////////////////////////////////////////////////////
