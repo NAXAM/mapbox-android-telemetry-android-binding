@@ -10,9 +10,9 @@
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
-var VERSION= "3.1.5";
-var NUGET_SUFIX = ".3";
-var ANDROID_CORE_VERSION = "0.2.1";
+var VERSION= "4.4.1";
+var NUGET_SUFIX = ".0";
+var ANDROID_CORE_VERSION = "1.3.0";
 
 //////////////////////////////////////////////////////////////////////
 // PREPARATION
@@ -26,21 +26,12 @@ var artifacts = new [] {
         ReleaseNotes = new string [] {
             "Mapbox for Android Core - v{0}"
         },
-        SolutionPath = "./Naxam.Mapbox.MapboxAndroidCore/Naxam.Mapbox.MapboxAndroidCore.sln",
-        AssemblyInfoPath = "./Naxam.Mapbox.MapboxAndroidCore/Naxam.Mapbox.MapboxAndroidCore/Properties/AssemblyInfo.cs",
-        NuspecPath = "./Naxam.Mapbox.MapboxAndroidCore/mapboxandroidcore.nuspec",
+        SolutionPath = "./Mapbox.Services.Android.Telemetry.sln",
+        AssemblyInfoPath = "./Naxam.Mapbox.MapboxAndroidCore/Properties/AssemblyInfo.cs",
+        NuspecPath = "./mapboxandroidcore.nuspec",
         DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-core/{0}/mapbox-android-core-{0}.aar",
-        JarPath = "./Naxam.Mapbox.MapboxAndroidCore/Naxam.Mapbox.MapboxAndroidCore/Jars/mapbox-android-core.aar",
-        Dependencies = new NuSpecDependency[] {
-                 new NuSpecDependency {
-                    Id = "Xamarin.Android.Support.v7.AppCompat",
-                    Version = "27.0.2.1"
-                },
-                new NuSpecDependency {
-                    Id = "Xamarin.GooglePlayServices.Location",
-                    Version = "60.1142.1"
-                }
-        }
+        JarPath = "./Naxam.Mapbox.MapboxAndroidCore/Jars/mapbox-android-core.aar",
+        Dependencies = new NuSpecDependency[] {}
     },
     new Artifact {
         Version = VERSION + NUGET_SUFIX,
