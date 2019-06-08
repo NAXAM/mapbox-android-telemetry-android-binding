@@ -45,9 +45,13 @@ var artifacts = new [] {
         DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-telemetry/{0}/mapbox-android-telemetry-{0}.aar",
         JarPath = "./Naxam.Mapbox.Services.Android.Telemetry/Jars/mapbox-android-telemetry.aar",
         Dependencies = new NuSpecDependency[] {
-                 new NuSpecDependency {
-                    Id = "Xamarin.Android.Support.v7.AppCompat",
-                    Version = "27.0.2.1"
+                new NuSpecDependency {
+                    Id = "Xamarin.Android.Support.Annotations",
+                    Version = "28.0.0.1"
+                },
+                new NuSpecDependency {
+                    Id = "Xamarin.Android.Support.Core.Utils",
+                    Version = "28.0.0.1"
                 },
                 new NuSpecDependency {
                     Id = "Square.OkHttp3",
@@ -59,11 +63,7 @@ var artifacts = new [] {
                 },
                 new NuSpecDependency {
                     Id = "GoogleGson",
-                    Version = "2.8.1"
-                },
-                new NuSpecDependency {
-                    Id = "Xamarin.Android.Arch.Lifecycle.Extensions",
-                    Version = "1.0.0.1"
+                    Version = "2.8.5"
                 }
         }
     }
@@ -112,7 +112,10 @@ Task("Pack")
 {
     foreach(var artifact in artifacts) {
         NuGetRestore(artifact.SolutionPath);
-        MSBuild(artifact.SolutionPath, settings => settings.SetConfiguration(configuration));
+        MSBuild(artifact.SolutionPath, settings => {
+            settings.ToolVersion = MSBuildToolVersion.VS2019;
+            settings.SetConfiguration(configuration);
+        });
         NuGetPack(artifact.NuspecPath, new NuGetPackSettings {
             Version = artifact.Version,
             Dependencies = artifact.Dependencies,
