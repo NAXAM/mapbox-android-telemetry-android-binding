@@ -10,7 +10,7 @@
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
-var VERSION= "4.4.1";
+var VERSION= "4.5.1";
 var NUGET_SUFIX = ".0";
 var ANDROID_CORE_VERSION = "1.3.0";
 
@@ -20,24 +20,24 @@ var ANDROID_CORE_VERSION = "1.3.0";
 
 var artifacts = new [] {
     
-     new Artifact {
-        Version =ANDROID_CORE_VERSION + NUGET_SUFIX,
-        NativeVersion = ANDROID_CORE_VERSION,
-        ReleaseNotes = new string [] {
-            "Mapbox for Android Core - v{0}"
-        },
-        SolutionPath = "./Mapbox.Services.Android.Telemetry.sln",
-        AssemblyInfoPath = "./Naxam.Mapbox.MapboxAndroidCore/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxandroidcore.nuspec",
-        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-core/{0}/mapbox-android-core-{0}.aar",
-        JarPath = "./Naxam.Mapbox.MapboxAndroidCore/Jars/mapbox-android-core.aar",
-        Dependencies = new NuSpecDependency[] {}
-    },
+    //  new Artifact {
+    //     Version =ANDROID_CORE_VERSION + NUGET_SUFIX,
+    //     NativeVersion = ANDROID_CORE_VERSION,
+    //     ReleaseNotes = new string [] {
+    //         "Mapbox for Android Core - v{0}"
+    //     },
+    //     SolutionPath = "./Mapbox.Services.Android.Telemetry.sln",
+    //     AssemblyInfoPath = "./Naxam.Mapbox.MapboxAndroidCore/Properties/AssemblyInfo.cs",
+    //     NuspecPath = "./mapboxandroidcore.nuspec",
+    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-core/{0}/mapbox-android-core-{0}.aar",
+    //     JarPath = "./Naxam.Mapbox.MapboxAndroidCore/Jars/mapbox-android-core.aar",
+    //     Dependencies = new NuSpecDependency[] {}
+    // },
     new Artifact {
         Version = VERSION + NUGET_SUFIX,
         NativeVersion = VERSION,
         ReleaseNotes = new string [] {
-            "Mapbox for Android - SdkCore v{0}"
+            string.Format("Mapbox for Android - Telemetry v{0}", VERSION)
         },
         SolutionPath = "./Mapbox.Services.Android.Telemetry.sln",
         AssemblyInfoPath = "./Naxam.Mapbox.Services.Android.Telemetry/Properties/AssemblyInfo.cs",
@@ -55,7 +55,7 @@ var artifacts = new [] {
                 },
                 new NuSpecDependency {
                     Id = "Square.OkHttp3",
-                    Version = "3.8.1"
+                    Version = "3.12.3"
                 },
                 new NuSpecDependency {
                     Id = "Naxam.Mapbox.MapboxAndroidCore",

@@ -18,6 +18,14 @@ We specialize in developing mobile applications using Xamarin and native technol
 Install-Package Naxam.Mapbox.Services.Android.Telemetry
 ```
 
+## Upgrade
+1. Change version appropriately in `build.cake`
+2. After successfull compilation, run this command
+
+```
+sh build.sh --settings_skipverification=true
+```
+
 ## Usage
 
 Plz follow the official guide [here](https://mvnrepository.com/artifact/com.mapbox.mapboxsdk/mapbox-android-telemetry).
